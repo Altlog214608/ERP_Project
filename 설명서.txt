@@ -1,0 +1,65 @@
+집에서 테스트 해보기
+
+
+사용법
+
+
+1. 환경 갖추기
+python 3.13.2
+MySql Server 8.0.41
+MySql Workbench 8.0.41
+
+
+- 워크벤치 로그인하고 File - open sql script - init.sql 실행하면 테이블 생성 가능
+기존 테이블 데이터 사라지므로 필요 시 백업
+참고자료 https://ziszini.tistory.com/119
+
+- 패키지 설치.bat 실행하면 서버/클라 돌리는데 필요한 패키지 설치 가능
+파이참 가상환경에서는 따로 설치해야 할 수도 있음
+터미널에서 pip install -r requirements.txt 입력
+
+2. server\erpServer.py의 __name__=="__main__" 부분에서 host port 설정하기
+- host는 localhost, 포트는 12345 권장
+
+3. server\msgHaneler.py에서 dbm 설정해주기
+- 호스트는 localhost로, user pw 본인 설정으로
+
+4. main.py의 run()에서 호스트 포트 설정하기
+- 서버와 동일하게 (localhost 12345)
+
+5. run_server.bat 실행해서 서버 돌리기
+- 또는 server\erpServer.py 직접 실행
+
+6. run_client.bat 실행 또는 파이참에서 직행해서 클라이언트 테스트하기
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+_tkinter.TclError: Can't find a usable init.tcl in the following directories:
+에러 뜰 경우
+
+파이썬 설치 경로 tcl 폴더 가서
+tcl0.0, tk0.0 2개 폴더(숫자는 버전에 따라 다름) 복사 후 
+파이썬 설치 경로의 lib폴더 안에 에 붙여넣기
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+변동사항(프레임, 테이블 등) 있을 경우 공유하기
+- 구글 시트에 날짜 시간 작성자 변동사항 작성해야 편할듯
+개인폴더\성진하\erp\프레임\프레임 분류 (파일명) 의 수정내역 탭
+
+- 프레임 수정 시 드라이브에 새로 올리고 새로 올렸다고 적기
+
+- f00000 함수 수정했다면 무슨 함수 수정했는지도 적기
+
+- 테이블 구조 변경 시 어떻게 변경됐는지 자세하게 적기
+
+
+
+
+
+
+
+
+
